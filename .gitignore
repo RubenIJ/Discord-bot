@@ -1,0 +1,9 @@
+# Node.js dependencies (worden nooit meegestuurd, haal je op via npm install)
+node_modules/
+
+# Je geheime Discord bot token
+.env
+
+# Lokale SQLite databases (zodat jouw scores en testdata privé blijven)
+*.db
+*.db-journal

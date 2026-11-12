@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="bot.js" />
+    <File Path="database.js" />
+  </Folder>
+</Solution>

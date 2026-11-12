@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "better-sqlite3": "^13.1.1",
+    "discord": "^0.8.2",
+    "discord.js": "^14.28.1",
+    "dotenv": "^18.0.10"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.1.1": true,
+    "sqlite3@6.0.1": true
+  }
+}
