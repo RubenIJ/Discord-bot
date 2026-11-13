@@ -12,6 +12,9 @@ const client = new Client({
     ]
 });
 
+const ongoing = new Set();
+const points = [10, 8, 6, 4, 2]; 
+
 client.once('ready', () => {
     console.log(`Ingelogd als ${client.user.tag}! Bot staat aan.`);
 });
@@ -74,6 +77,12 @@ client.on('messageCreate', async (message) => {
             return message.channel.send('Oeps, kon even geen bezienswaardigheid vinden. Probeer het nog eens!');
         }
 
+              if (message.content === '!score') {
+        const rij = db.prepare('SELECT score FROM pinpoint_scores WHERE guild_id = ? AND user_id = ?')
+            .get(message.guild.id, message.author.id);
+        message.reply(' Jouw score op deze server: ' + (rij ? rij.score : 0) + ' punten');
+    }
+    
         // Maak een strakke embed met de vraag om het land te raden
         const embed = new EmbedBuilder()
             .setColor(0x0099FF)
